@@ -1,0 +1,67 @@
+<p class="form-title">旅行プラン新規登録</p>
+
+<%= form_for [@travel] do |f| %>
+    <div class="form-box">
+    <div class="form-header">
+    <div class="form-field">
+        <%= f.label :destination_id, "目的地", class: "form-content-item" %>
+        <%= f.collection_select :destination_id, Prefecture.all, :id, :prefecture_name, :prompt => '選択してください', class: "form-content-item-area" %>
+    </div>
+    <div class="form-field">
+        <%= f.label :budget_id, "予算", class: "form-content-item" %>
+        <%= f.collection_select :budget_id, Budget.all, :id, :amount, :prompt => '選択してください' %>
+    </div>
+    <div class="form-field">
+        <%= f.label :start_date, "開始日", class: "form-content-item" %>
+        <%= f.date_field :start_date, id: "cal1" %>
+    </div>
+    <div class="form-field">
+        <%= f.label :finish_date, "終了日", class: "form-content-item" %>
+        <%= f.date_field :finish_date, id: "cal2" %>
+    </div>
+    <div class="form-field">
+        <%= f.label :duration, "旅行期間", class: "form-content-item" %>
+        <%= f.text_field :duration, readonly: true, id: "result", class: "cal-result" %>日間
+    </div>
+    </div>
+    
+    <div class="buttons">
+    <div class="actions">
+        <%= f.submit "登録" %>
+    </div>
+    
+    <div class="actions">
+    <%= link_to_add_association '旅程を追加', f, :plans, partial: "travels/plans_fields",
+        class: 'btn-default',
+        data: {
+            association_insertion_node: '#detail-association-insertion-point',
+            association_insertion_method: 'after' }
+    %>
+    </div>
+    </div>
+    
+<!--明細用のフォーム-->
+    <body id='detail-association-insertion-point'>
+        <div class="form-group">
+            <%= f.fields_for :plans do |p| %>
+                <%= render 'plans_fields', f: p %>
+            <% end %>
+        </div>
+    </body>
+    </div>
+    
+<% end %>
+
+<script>
+$('#cal2').change(function(){
+    var s = $('#cal1').val();
+    var a = $('#cal2').val();
+    
+    var si = new Date(s);
+    var sa = new Date(a);
+    
+    var result = (sa - si)/86400000
+    
+    $('#result').val(result)
+});
+</script>

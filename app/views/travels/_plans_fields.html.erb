@@ -1,0 +1,29 @@
+<tr class="nested-fields">
+    <%= f.hidden_field :id %>
+    
+    <td class="form-content">
+    <%= f.label :planname, "旅程" , class: "form-content-item" %>
+    <%= f.text_field :planname %>
+    </td>
+
+    <td class="form-content">
+    <%= f.label :category_id, "カテゴリ", class: "form-content-item" %>
+    <%= f.select :category_id, {'史跡': 1, '娯楽': 2, '体験': 3, '宿泊': 4, '買い物': 5, '移動': 6}, { include_blank: '選択してください'}, { class: 'form-control' , required: true } %>
+    <!--カテゴリは本来、カテゴリテーブルを用意してidでリンクさせたかったが、簡略化している（カラムの型もtextにしている）-->
+    </td>
+    
+    <td class="form-content">
+    <%= f.label :from, "From", class: "form-content-item" %>
+    <%= f.datetime_field :from %>
+    </td>
+    
+    <td class="form-content">
+    <%= f.label :to, "To", class: "form-content-item" %>
+    <%= f.datetime_field :to %>
+    </td>
+    
+    <td class="form-content">
+    <%= link_to_remove_association '削除', f, class: 'btn-default' %>
+    </td>
+    
+</tr>

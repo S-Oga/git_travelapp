@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='ja'>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>MelonTravel -<%= yield :title %></title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </head>
+  
+  <body>
+    <%= render partial: 'common/header' %>
+    
+    <main>
+    <%= yield %>
+    </main>
+
+    <!--<footer>-->
+    <!--  <div class="footer-text">Copyright Shiro Ogahara, 2021</div>-->
+    <!--</footer>-->
+  </body>
+</html>

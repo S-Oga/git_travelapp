@@ -1,0 +1,19 @@
+<p class="form-title">あなたの旅の記録</p>
+
+<div class="flex-col3">
+    <% @travels.each do |t| %>
+    <div class="flex-child">
+    <div class="field">
+        目的地：<%= t.destination_id %><br />
+        予算：<%= t.budget_id %>円<br />
+        出発日：<%= t.start_date %><br />
+        最終日：<%= t.finish_date %><br />
+        期間：<%= t.duration %>日<br />
+        テスト：<%= t.plans.planname %>
+    </div>
+    <div class="link-box">
+        <a href="/travels/<%= t.id %>", class="link">詳細を確認する</a>
+    </div>
+    </div>
+    <% end %>
+</div>

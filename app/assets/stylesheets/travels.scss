@@ -1,0 +1,399 @@
+// Place all the styles related to the travel controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    width: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+main{
+  width: 100%;
+}
+
+// ヘッダー用
+.header{
+    background-color: #48D1CC;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon{
+    width: 100px;
+    line-height: 50px;
+    margin-left: 43px;
+    .icon-link{
+        color: #fff;
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+        
+    }
+}
+
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    .menu-items{
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        margin-right: 50px;
+        list-style: none;
+        text-decoration: none;
+    }
+    .item{
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 0 0 0;
+        list-style: none;
+        text-decoration: none;
+    }
+}
+
+// スライドショー用
+.slideshow{
+    display: block;
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+}
+
+.slick1{
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slick1 img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.slideshowtext {
+    position: absolute;/*絶対配置*/
+    color: white;
+    top: 75px;
+    left: 50px;
+    .main{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .sub{
+        font-size: 18px;
+    }
+}
+
+// メインテキスト
+.main-text{
+    color: #555555;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    height: 80px;
+    padding: 15px 0;
+}
+
+// メイン機能紹介部分
+.lead-functions{
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+}
+
+// footer
+footer{
+    background-color: #48D1CC;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+    .footer-text{
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 30px;
+    }
+}
+
+// ユーザー登録画面
+.userform-box{
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .5);
+}
+
+.user_signup{
+    background-color: #48D1CC;
+    height: 50px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.field{
+    padding: 5px 50px;
+    color: #555555;
+    font-size: 16px;
+    font-weight: thin;
+}
+
+.userform-box input[type="text"],[type="email"],[type="password"],
+.userform-box select{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: button;
+    appearance: none;
+    border-radius: 0;
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #aaa;
+    padding: 15px;
+}
+
+.userform-box .actions{
+    display: flex;
+    justify-content: center;
+}
+.userform-box .actions input{
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    width: 200px;
+    background: #48D1CC;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 10px;
+    margin: 5px;
+    padding: 20px 15px;
+}
+
+//旅程登録フォーム用
+.form-title{
+    font-size: 20px;
+    color: #555555;
+    margin: 15px 30px;
+}
+
+.form-box{
+    margin: 15px 0 0 0;
+    max-width: 100%;
+}
+
+.form-header{
+    display: flex;
+    width: 100%;
+}
+
+.form-content-item{
+    padding: 5px 30px;
+    color: #555555;
+    font-size: 16px;
+    font-weight: thin;
+}
+
+.form-field{
+    color: #555555;
+    font-size: 16px;
+    font-weight: thin;
+}
+.cal-result{
+    width: 30px;
+}
+
+.buttons{
+    display: flex;
+}
+
+
+// .form-group{
+//     display: flex;
+//     width: 100%;
+// }
+
+.actions input{
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    width: 100px;
+    background: #48D1CC;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 15px;
+    margin: 15px 30px;
+    padding: 10px 15px;
+}
+
+.btn-default{
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    width: 100px;
+    background: #EEEEEE;
+    color: #555555;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 15px;
+    margin: 15px 30px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    
+}
+
+//マイページ用（基本ユーザーフォームを転用）
+
+.mypage-box{
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .5);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+/* フレックスボックスの基本設定 等間隔（両端揃え）折返しあり */
+[class^="flex-col"] {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 5px 10px;
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+/* コンテンツ下のマージン */
+.flex-child {
+    margin-bottom: 25px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, .5);
+}
+
+/* 各カラム毎のコンテンツと疑似要素の横幅 */
+.flex-col2 .flex-child { width: calc( (100% - 10px) / 2 ); }
+
+.flex-col3::after,
+.flex-col3 .flex-child { width: calc( (100% - 20px) / 3 ); }
+
+.flex-col4::before,
+.flex-col4::after,
+.flex-col4 .flex-child { width: calc( (100% - 30px) / 4 ); }
+	
+/* 最終行は両端揃えにしない */
+.flex-col3::after,
+.flex-col4::before,
+.flex-col4::after { content: ""; }
+
+.flex-col4::before { order: 1; }
+
+/* レスポンシブ対応 */
+
+/* 991px以下で4列 → 3列 */
+@media screen and (max-width: 991px) {
+	.flex-col4::after,
+	.flex-col4 .flex-child { width: calc( (100% - 20px) / 3 ); }
+}
+
+/* 767px以下で4列・3列 → 2列 */
+@media screen and (max-width: 767px) {
+	.flex-col3 .flex-child,	
+	.flex-col4 .flex-child { width: calc( (100% - 10px) / 2 ); }
+}
+
+/* 575px以下で全て1列 */
+@media screen and (max-width: 575px) {
+	.flex-col2 .flex-child,
+	.flex-col3 .flex-child,
+	.flex-col4 .flex-child { width: 100%; }
+}
+
+.mypage-box{
+    height: 50px;
+    width: 100%;
+    color: #555555;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.link-box{
+    background-color: #48D1CC;
+    height: 30px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    .link{
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 0 0 0;
+        list-style: none;
+        text-decoration: none;
+    }
+}
+
+// .button{
+//     background-color: #48D1CC;
+//     color: #fff;
+//     font-size: 18px;
+//     font-weight: bold;
+//     padding: 8px 30px;
+//     border-style: none;
+//     filter: drop-shadow(0.5px 0.5px 0.3px rgb(0, 0, 0));
+//     cursor: pointer;
+// }
+
+// .posts{
+//     margin: 45px 100px;
+//     box-shadow: 2px 2px 4px gray;
+// }
+
+// .post{
+//     width: 100%;
+//     height: 100%;
+//     margin: 10px;
+//     padding: 10px 10px 30px 10px;
+//     display: flex;
+//     word-break: break-all;
+//     white-space: pre-line;
+// }
+
+// .button-list{
+//     display: flex;
+//     list-style: none;
+//     .button2{
+//         background-color: #48D1CC;
+//         color: #fff;
+//         font-size: 18px;
+//         font-weight: bold;
+//         margin: 0 10px 0 0;
+//         padding: 8px 30px;
+//         border-style: none;
+//         filter: drop-shadow(0.5px 0.5px 0.3px rgb(0, 0, 0));
+//         text-decoration: none;
+//     }
+
+// }
+
+// h3{
+//     color: #555555;
+//     margin-left: 100px;
+// }
